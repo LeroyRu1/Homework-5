@@ -34,59 +34,49 @@ public class Main {
             System.out.println(year + " год не является високосным");
         }
 
-    // Задача 4
+        // Задача 4
 
-    int deliveryDistance = 20;
-    int delivereDays = 1;
-        if(deliveryDistance <=20)
+        int deliveryDistance = 20;
+        int delivereDays = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("Потрубуется " + delivereDays + " день доставки");
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            delivereDays++;
+            System.out.println("Потребуется " + delivereDays + " дня доставки");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            delivereDays++;
+            delivereDays++;
+            System.out.println("Потребуется " + delivereDays + " дня доставки");
+        } else {
+            System.out.println("Доставки нет");
+        }
 
-    {
-        System.out.println("Потрубуется " + delivereDays + " день доставки");
-    } else if(deliveryDistance >20&&deliveryDistance <=60)
+        //Задача 5
 
-    {
-        delivereDays++;
-        System.out.println("Потребуется " + delivereDays + " дня доставки");
-    } else if(deliveryDistance >60&&deliveryDistance <=100)
-
-    {
-        delivereDays++;
-        delivereDays++;
-        System.out.println("Потребуется " + delivereDays + " дня доставки");
-    } else
-
-    {
-        System.out.println("Доставки нет");
+        int monthNumber = 13;
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Принадлежит к сезону зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Принадлежит к сезону весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Принадлежит к сезону лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Принадлежит к сезону весна");
+                break;
+            default:
+                System.out.println("Больше месяцев нет");
+        }
     }
-
-    //Задача 5
-
-    int monthNumber = 13;
-        switch(monthNumber)
-
-    {
-        case 12:
-        case 1:
-        case 2:
-            System.out.println("Принадлежит к сезону зима");
-            break;
-        case 3:
-        case 4:
-        case 5:
-            System.out.println("Принадлежит к сезону весна");
-            break;
-        case 6:
-        case 7:
-        case 8:
-            System.out.println("Принадлежит к сезону лето");
-            break;
-        case 9:
-        case 10:
-        case 11:
-            System.out.println("Принадлежит к сезону весна");
-            break;
-        default:
-            System.out.println("Больше месяцев нет");
-    }
-}
 }
