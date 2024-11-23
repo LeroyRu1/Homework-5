@@ -2,28 +2,24 @@ public class Main {
     public static void main(String[] args) {
 
         //Зачада 1
-        int clientOs = 1;
-        if (clientOs == 0) {
+        int clientOS = 1;
+        if (clientOS == 0) {
             System.out.println("Установите версию приложения для IOS по ссылке");
-        }
-        if (clientOs == 1) {
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         //Задача 2
 
         int clientOs2 = 1;
-        int clientDeviceYear = 2014;
+        int clientDeviceYear = 2016;
         if (clientOs2 == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-        }
-        if (clientOs2 == 0 && clientDeviceYear >= 2015) {
+        } else if (clientOs2 == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для IOS по ссылке");
-        }
-        if (clientOs2 ==1 && clientDeviceYear < 2015) {
+        } else if (clientOs2 == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
-        if (clientOs == 1 && clientDeviceYear >= 2015) {
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
@@ -42,21 +38,18 @@ public class Main {
 
         // Задача 4
 
-        int deliveryDistance = 100;
+        int deliveryDistance = 20;
         int delivereDays = 1;
         if (deliveryDistance <= 20) {
             System.out.println("Потрубуется " + delivereDays + " день доставки");
-        }
-        if (deliveryDistance > 20 && deliveryDistance <= 60) {
-        delivereDays++;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            delivereDays++;
             System.out.println("Потребуется " + delivereDays + " дня доставки");
-        }
-        if (deliveryDistance > 60 && deliveryDistance <= 100) {
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             delivereDays++;
             delivereDays++;
             System.out.println("Потребуется " + delivereDays + " дня доставки");
-        }
-        if (deliveryDistance > 100){
+        } else {
             System.out.println("Доставки нет");
         }
 
@@ -87,5 +80,5 @@ public class Main {
             default:
                 System.out.println("Больше месяцев нет");
         }
-        }
     }
+}
